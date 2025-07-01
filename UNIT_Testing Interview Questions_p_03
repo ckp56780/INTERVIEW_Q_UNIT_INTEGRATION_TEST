@@ -1,0 +1,7 @@
+5. How do you test HTTP requests and responses in controller tests?
+Answer:
+Use the MockMvc object to perform HTTP operations and assert the results.
+
+Example:mockMvc.perform(get("/api/items"))
+               .andExpect(status().isOk())
+               .andExpect(jsonPath("$.size()").value(3));
